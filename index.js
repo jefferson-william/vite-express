@@ -35,7 +35,7 @@ function __awaiter(thisArg, _arguments, P, generator) {
 const { NODE_ENV } = process.env;
 const Config = {
     mode: (NODE_ENV === "production" ? "production" : "development"),
-    vitePort: 5173,
+    vitePort: process.env.VITE_PORT || 5173,
     viteHost: process.env.VITE_HOST || 'localhost',
     viteServerSecure: false,
 };
